@@ -1,4 +1,4 @@
-class BinaryTree
+class BinarySearchTree
 	attr_accessor :val, :left, :right
 
 	def initialize(val)
@@ -10,13 +10,13 @@ class BinaryTree
 	def add(val)
 		if val < @val
 			if @left.nil?
-				@left = BinaryTree.new(val)
+				@left = BinarySearchTree.new(val)
 			else
 				@left.add(val)
 			end
 		else val > @val
 			if @right.nil?
-				@right = BinaryTree.new(val)
+				@right = BinarySearchTree.new(val)
 			else
 				@right.add(val)
 			end
